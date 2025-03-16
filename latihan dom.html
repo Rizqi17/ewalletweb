@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List dengan DOM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      #taskList {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Tambahkan tugas..." />
+    <button id="submit">Tambah</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      form = document.getElementById("taskInput");
+      submitButton = document.getElementById("submit");
+
+      submitButton.addEventListener("click", () => {
+        result3 = document.getElementById("taskList");
+
+        paragraph = document.createElement("p");
+        paragraph.textContent = form.value;
+
+        result3.appendChild(paragraph);
+      });
+    </script>
+  </body>
+</html>
